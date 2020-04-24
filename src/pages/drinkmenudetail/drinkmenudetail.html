@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons end padding>
+      <button ion-button color="secondary" outline (click)="gotoNweactivityPage()">
+        สั่งซื้อ
+      </button>
+    </ion-buttons>
+    <ion-title>{{drink.name}}</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <h5><p>ชื่อกาแฟ: {{drink.name}}</p></h5>
+  <h5><p>ราคา: {{drink.price}}</p></h5>
+  <p>
+    <img [src]="drink.img" alt="">
+  </p> 
+  <p>รายละเอียด: {{drink.detail}}</p>
+
+</ion-content>  
+   

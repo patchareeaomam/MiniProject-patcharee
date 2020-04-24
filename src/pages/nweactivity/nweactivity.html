@@ -1,0 +1,41 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>รายละเอียดการสั่งซื้อ</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<form [formGroup]="frmActivity" (ngSubmit)="saveRecord()">
+  <ion-list>
+    <ion-item>
+      <ion-input type="text" name="title" [(ngModel)]="title" placeholder="ชื่อเมนู"
+        formControlName="title">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" name="description" [(ngModel)]="description" placeholder="จำนวน" formControlName="description">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" name="price" [(ngModel)]="price" placeholder="ราคา" formControlName="price">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="text" name="note" [(ngModel)]="note" placeholder="หมายเหตุ" formControlName="note">
+      </ion-input>
+    </ion-item>
+
+  </ion-list>
+  <div class="row">
+    <div class="col col50">
+      <button ion-button type="submit" [disabled]="!frmActivity.valid" color="danger" >
+        save
+      </button>
+    </div>
+  </div>
+</form>
+</ion-content>

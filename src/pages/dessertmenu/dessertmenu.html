@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>รายการขนม</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let dessert of dessert" (click)="goToDessertdetailPage(dessert.id)">
+      <ion-avatar item-start >
+        <img [src]="dessert.img" alt="">
+      </ion-avatar>
+      <h2>{{dessert.name}}</h2>
+      <p>{{dessert.price}}</p>
+    </ion-item>
+  </ion-list> 
+</ion-content> 

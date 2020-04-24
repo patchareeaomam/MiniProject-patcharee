@@ -1,14 +1,31 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Amazon
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <div class="showhead">
+    <img src="https://hilight.kapook.com/img_cms2/user/natthida_p/2020/03/cafeamezon.jpg" class="showimg">
+  <h5> Welcome to Cafe Amazon</h5>  
+  </div>
+  <ion-list>
+    <ion-item (click)="goToDrinkmenu()">
+      <ion-icon name="cafe" item-start></ion-icon>รายการเครื่องดื่ม
+    </ion-item>
+    <ion-item (click)="goToDessertmenu()">
+      <ion-icon name="restaurant" item-start></ion-icon>รายการขนม
+    </ion-item>
+    <ion-item (click)="goToOrderlistPage()">
+      <ion-icon name="basket" item-start></ion-icon>รายการสั่งซื้อของฉัน
+    </ion-item>
+    <ion-item (click)="goToContact()">
+      <ion-icon name="call" item-start></ion-icon>ติดต่ออเมซอน
+    </ion-item>
+    <ion-item (click)="goToHealthnews()">
+      <ion-icon name="paper" item-start></ion-icon>ข่าวสารสุขภาพทั่วไป
+    </ion-item>
+  </ion-list>
 </ion-content>
